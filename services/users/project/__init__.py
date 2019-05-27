@@ -1,8 +1,8 @@
 # services/users/project/__init__.py
 
-import os, sys
-from flask import Flask, jsonify
-from flask_restful import Resource, Api
+import os
+from flask import Flask
+# from flask_restful import Resource, Api
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -21,7 +21,7 @@ db = SQLAlchemy()  # new
 
 # print(app.config, file=sys.stderr)
 
-# new
+
 def create_app(script_info=None):
 
     # instantiate the app

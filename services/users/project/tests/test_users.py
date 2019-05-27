@@ -54,7 +54,6 @@ class TestUserService(BaseTestCase):
             self.assertIn('Invalid payload.', data['message'])
             self.assertIn('fail', data['status'])
 
-    
     def test_add_user_invalid_json_keys(self):
         """
         Ensure error is thrown if the JSON object does not have a username key.
@@ -179,6 +178,7 @@ class TestUserService(BaseTestCase):
             self.assertIn(b'All Users', response.data)
             self.assertNotIn(b'<p>No users!</p>', response.data)
             self.assertIn(b'michael', response.data)
+
 
 if __name__ == '__main__':
     unittest.main()
